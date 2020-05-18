@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: pool-app
+
+  # Настройки СУБД
+  datasource:
+    url: jdbc:sqlserver://localhost;databaseName=rls2
+    driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    username: ppa
+    password: ppa
+
+  # Настройки ORM СУБД
+  jpa:
+    show-sql: true # Отображать в логе выполняемые операции
+    database: SQL_SERVER
+    hibernate:
+      ddl-auto: create-drop # Как обновлять схему
+    properties:
+      dialect: org.hibernate.dialect.SQLServer2012Dialect #Диалект SQL
+  data:
+    rest:
+      basePath: /hal #Базовый адрес по которому будет доступно api
+  jackson:
+    time-zone: Asia/Yekaterinburg
+    locale: ru-Ru
+    default-property-inclusion: NON_NULL
