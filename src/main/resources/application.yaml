@@ -1,3 +1,6 @@
+connectionpreparer.enabled: true
+init-data: false
+
 spring:
   application:
     name: pool-app
@@ -14,7 +17,7 @@ spring:
     show-sql: true # Отображать в логе выполняемые операции
     database: SQL_SERVER
     hibernate:
-      ddl-auto: create-drop # Как обновлять схему
+      ddl-auto: update # Как обновлять схему
     properties:
       dialect: org.hibernate.dialect.SQLServer2012Dialect #Диалект SQL
   data:

@@ -5,6 +5,8 @@ import org.hibernate.cfg.Configuration;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
+import org.springframework.context.annotation.Conditional;
 import org.springframework.stereotype.Component;
 import xyz.matve.pool.models.Sale;
 import xyz.matve.pool.repos.SaleRepo;
@@ -18,6 +20,7 @@ import java.util.List;
  * Первоначальная загрузка данных
  */
 @Component
+@ConditionalOnProperty(name = "init-data", havingValue = "true")
 @Slf4j
 public class InitData implements ApplicationRunner {
     @Autowired
@@ -29,7 +32,7 @@ public class InitData implements ApplicationRunner {
 
 
     // TODO логгировать вызовы
-    private Sale createSale(int appUserId, String product, int qty) {
+    public static Sale createSale(int appUserId, String product, int qty) {
         Sale sale = new Sale();
         sale.setAppUserId(appUserId);
         sale.setProduct(product);
