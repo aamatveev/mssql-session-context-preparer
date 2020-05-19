@@ -48,4 +48,4 @@ CREATE SECURITY POLICY Security.SalesFilter
 ```
 4. run app
 5. open url http://localhost:8080/sales/1 and http://localhost:8080/sales/2
-6 . compare results
+6. compare results
