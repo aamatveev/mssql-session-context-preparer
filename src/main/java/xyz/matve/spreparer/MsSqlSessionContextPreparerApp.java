@@ -8,21 +8,10 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.data.jpa.repository.support.SimpleJpaRepository;
 
 @SpringBootApplication
-@EnableJpaRepositories(basePackages = "xyz.matve.pool.repos", repositoryBaseClass = SimpleJpaRepository.class)
-@EntityScan(basePackages="xyz.matve.pool.models")
+@EnableJpaRepositories(basePackages = "xyz.matve.spreparer.repos", repositoryBaseClass = SimpleJpaRepository.class)
+@EntityScan(basePackages="xyz.matve.spreparer.models")
 public class MsSqlSessionContextPreparerApp {
     public static void main(String[] args) {
         SpringApplication.run(MsSqlSessionContextPreparerApp.class, args);
     }
-
-//
-//    @Bean
-//    @ConditionalOnMissingBean(type = "JpaTransactionManager")
-//    JpaTransactionManager transactionManager(EntityManagerFactory entityManagerFactory) {
-//        JpaTransactionManager transactionManager = new JpaTransactionManager();
-//        transactionManager.setEntityManagerFactory(entityManagerFactory);
-//        return transactionManager;
-//    }
-//
-//
 }

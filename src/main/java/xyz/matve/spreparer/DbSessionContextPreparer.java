@@ -18,7 +18,8 @@ public class DbSessionContextPreparer
     @AfterReturning(pointcut = "execution(* com.zaxxer.hikari.HikariDataSource.getConnection(..))", returning = "connection")
     public void prepare(Connection connection) throws SQLException {
 
-        PreparedStatement preparedStatement = connection.prepareStatement("EXEC sp_set_session_context @key=N'UserId', @value=2");
+        int userId = UserContext.getUserId();
+        PreparedStatement preparedStatement = connection.prepareStatement("EXEC sp_set_session_context @key=N'UserId', @value=" + userId);
         preparedStatement.executeUpdate();
 
     }
