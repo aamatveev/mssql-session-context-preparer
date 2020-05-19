@@ -1,4 +1,4 @@
-package xyz.matve.pool;
+package xyz.matve.spreparer;
 
 import org.aspectj.lang.annotation.AfterReturning;
 import org.aspectj.lang.annotation.Aspect;

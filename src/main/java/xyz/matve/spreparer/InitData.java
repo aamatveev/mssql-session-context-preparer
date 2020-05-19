@@ -1,4 +1,4 @@
-package xyz.matve.pool;
+package xyz.matve.spreparer;
 
 import lombok.extern.slf4j.Slf4j;
 import org.hibernate.cfg.Configuration;
@@ -6,14 +6,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
-import org.springframework.context.annotation.Conditional;
 import org.springframework.stereotype.Component;
-import xyz.matve.pool.models.Sale;
-import xyz.matve.pool.repos.SaleRepo;
+import xyz.matve.spreparer.models.Sale;
+import xyz.matve.spreparer.repos.SaleRepo;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 /**

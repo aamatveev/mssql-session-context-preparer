@@ -1,4 +1,4 @@
-package xyz.matve.pool.models;
+package xyz.matve.spreparer.models;
 
 import javax.persistence.*;
 
