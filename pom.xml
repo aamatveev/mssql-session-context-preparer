@@ -21,7 +21,7 @@
     </build>
 
     <properties>
-        <spring.version>2.2.2.RELEASE</spring.version>
+        <spring.version>2.5.12</spring.version>
         <spring.data.rest.hal.explorer.version>3.2.0.RELEASE</spring.data.rest.hal.explorer.version>
         <jdbc.mssql.version>7.4.1.jre8</jdbc.mssql.version>
         <lombok.version>1.18.10</lombok.version>
